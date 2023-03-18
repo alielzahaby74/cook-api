@@ -1,0 +1,72 @@
+:root {
+    --aside-content-width: 250px;
+}
+body {
+    background-color: #000;
+}
+aside {
+    position: fixed;
+    height: 100%;
+    z-index: 4;
+    left: calc(-1*var(--aside-content-width));
+}
+aside .toggle {
+    background-color: #fff;
+    position: absolute;
+    height: 100%;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    left: 250px;
+}
+aside .content {
+    background-color: #000;
+    position: absolute;
+    width: var(--aside-content-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+aside .content ul {
+    list-style: none;
+    padding: 0;
+}
+aside .content ul li {
+    padding-left: 10px;
+    cursor: pointer;
+}
+.items .item .overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f6f6ca;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
+    z-index: 2;
+    transition: top 0.5s ease;
+}
+.items .item:hover .overlay {
+    top: 0;
+}
+
+.contact-us {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.alert {
+    display: inline-block;
+}
+/* custom classes */
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
